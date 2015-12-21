@@ -1,0 +1,36 @@
+<template>
+
+  <div class="l-section">
+
+    <h3>To Get Started:</h3>
+
+    <ul>
+      <li>Run <code>npm install</code></li>
+      <li>Run <code>jspm install</code></li>
+      <li>Run <code>gulp watch</code> and watch the magic happen</li>
+    </ul>
+
+    <h3>File Organization</h3>
+    <p>Because Lego is broken apart into lots of small, composable modules, it is important that you as the developer piece things together in the correct order. That order is:</p>
+
+    <ul>
+      <li><strong>Settings</strong>: Global variables, site-wide settings, config switches, etc.</li>
+      <li><strong>Tools</strong>: Site-wide mixins and functions.</li>
+      <li><strong>Generic</strong>: Low-specificity, far-reaching rulesets (e.g. resets).</li>
+      <li><strong>Base</strong>: Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).</li>
+      <li><strong>Objects</strong>: Objects, abstractions, and design patterns (e.g. .media {}).</li>
+      <li><strong>Components</strong>: Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn’t get involved with.</li>
+      <li><strong>Trumps</strong>: High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).</li>
+    </ul>
+
+    <p>Each layer is grouped in a folder. The order of partials within each layer is fairly open; it is the sections themselves that are important to get in the correct order.</p>
+
+    <p>A <code>framework.scss</code> file at the base style directory imports all partial files from within their folders.</p>
+
+    <p><strong>Note:</strong> All partials—including your own—follow the &lt;section&gt;.&lt;file&gt; naming convention, e.g. _objects.box.scss, _components.carousel.scss.</p>
+
+    <p><strong>Note:</strong> This hierarchy was adopted from the Inuit CSS Getting Started Guide. <a href="https://github.com/inuitcss/getting-started" rel="nofollow">https://github.com/inuitcss/getting-started</a></p>
+
+  </div>
+
+</template>

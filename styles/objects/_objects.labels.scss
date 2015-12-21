@@ -1,0 +1,57 @@
+.label {
+  margin: 0 5px 0 0;
+  position:relative;
+  padding: 4px 8px;
+  border-radius:3px;
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: $greyscale-9;
+  border-color: $greyscale-4;
+  color: $greyscale-4;
+  line-height: 1;
+
+  &[data-icon] {
+
+    padding-left: 25px;
+
+    &:before {
+      content: attr(data-icon);
+      position: absolute;
+      display: block;
+      left: 5px;
+      transform: translateY(-55%);
+      top: 50%;
+      margin-right: 5px;
+      font-size: 15px;
+      color: $greyscale-4;
+    }
+
+  }
+
+}
+
+//label variable list
+//key is used in classname, arg1 is the var color
+$labels: (
+  danger: ($brand-danger),
+  success: ($brand-success),
+  warning: ($brand-warning),
+  info: ($brand-info)
+);
+
+//label class generator loop
+@each $label-name, $color in $labels {
+
+  .label--#{$label-name} {
+    background: scale-color($color, $lightness: 80%);
+    color: $color;
+
+    &[data-icon]:before {
+       color: $color;
+     }
+
+  }
+
+}

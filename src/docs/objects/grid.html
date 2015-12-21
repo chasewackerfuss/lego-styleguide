@@ -1,0 +1,349 @@
+<template>
+
+  <div class="l-section" tabitem="Standard Use">
+
+    <h4><code>.flex</code> and the number identifier should be added to the base for proper displaying. Default layout is set for <code>flex-direction:row</code> &amp; <code>flex-wrap:wrap</code>. The grid is also set up with (min-width) so (xs) is your base styling for mobile first. The modifiers are used for reseting the grid.</h4>
+
+    <div class="l-subheader">
+      <h4>Standard Use of Flex Grid</h4>
+      <h5>Flex grid items must be contained within a
+        <code>.flex flex--{*col-num}</code> class container. Individual items should follow the
+        <code>.flex__item--{*bp}-{*col-num}</code> format.</h5>
+    </div>
+
+    <div class="l-example">
+
+      <div class="l-rendered">
+
+        <div class="flex flex--12">
+          <div class="flex__item--md-4">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-6">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-12">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre prettyprint>
+        <div class="flex flex--12">
+          <div class="flex__item--md-4"></div>
+          <div class="flex__item--md-6"></div>
+          <div class="flex__item--md-2"></div>
+          <div class="flex__item--md-12"></div>
+        </div>
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div class="l-section" tabitem="Testing Item"></div>
+
+  <div class="l-section" tabitem="Flex Nesting">
+
+    <div class="l-subheader">
+      <h4>Flex Grid Nesting</h4>
+      <h5>Nesting is made easy with Tyrannosaurus Flex.</h5>
+    </div>
+
+    <div class="l-example">
+
+      <div class="l-rendered">
+
+
+        <div class="flex flex--12">
+
+          <div class="flex__item--md-12 flex__item--xs-12">
+            <div class="flex-test">
+              <div class="flex flex--12">
+
+                <div class="flex__item--md-7 flex__item--xs-12">
+                  <div class="flex-first flex-nested">
+                    <div class="flex flex--12">
+                      <div class="flex__item--md-7 flex__item--xs-12">
+                        <div class="flex-test flex-last flex-nested"></div>
+                      </div>
+                      <div class="flex__item--md-5 flex__item--xs-12">
+                        <div class="flex-test flex-last flex-nested"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex__item--md-5">
+                  <div class="flex-first flex-nested"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <pre prettyprint>
+        <div class="flex flex--12">
+
+          <div class="flex__item--md-12 flex__item--xs-12">
+            <div class="flex flex--12">
+
+              <div class="flex__item--md-7 flex__item--xs-12">
+                <div class="flex flex--12">
+                  <div class="flex__item--md-7 flex__item--xs-12">
+                  </div>
+                  <div class="flex__item--md-5 flex__item--xs-12">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex__item--md-5">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div class="l-section" tabitem="Offsets">
+
+    <div class="l-subheader">
+      <h4>Flex Grid Offsets</h4>
+      <h5>Define an offset by adding a
+        <code>.flex__offset--{*bp}-{*col-num}</code> modifier to the flex item.</h5>
+    </div>
+
+    <div class="l-example">
+
+      <div class="l-rendered">
+
+        <div class="flex flex--12">
+          <div class="flex__item--xs-1 flex__offset--xs-11">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-2 flex__offset--xs-10">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-3 flex__offset--xs-9">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-4 flex__offset--xs-8">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-5 flex__offset--xs-7">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-6 flex__offset--xs-6">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-7 flex__offset--xs-5">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-8 flex__offset--xs-4">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-9 flex__offset--xs-3">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-10 flex__offset--xs-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--xs-11 flex__offset--xs-1">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre prettyprint>
+        <div class="flex flex--12">
+          <div class="flex__item--xs-1 flex__offset--xs-11"></div>
+          <div class="flex__item--xs-2 flex__offset--xs-10"></div>
+          <div class="flex__item--xs-3 flex__offset--xs-9"></div>
+          <div class="flex__item--xs-4 flex__offset--xs-8"></div>
+          <div class="flex__item--xs-5 flex__offset--xs-7"></div>
+          <div class="flex__item--xs-6 flex__offset--xs-6"></div>
+          <div class="flex__item--xs-7 flex__offset--xs-5"></div>
+          <div class="flex__item--xs-8 flex__offset--xs-4"></div>
+          <div class="flex__item--xs-9 flex__offset--xs-3"></div>
+          <div class="flex__item--xs-10 flex__offset--xs-2"></div>
+          <div class="flex__item--xs-11 flex__offset--xs-1"></div>
+        </div>
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div class="l-section" tabitem="Alignment">
+
+    <div class="l-subheader">
+      <h4>Flex Grid Alignment</h4>
+      <h5>Vertically align flex items by using
+        <code>.flex--{*bp}-top</code>,
+        <code>.flex--{*bp}-middle</code>, or
+        <code>.flex--{*bp}-bottom</code>.</h5>
+    </div>
+
+    <div class="l-example">
+
+      <div class="l-rendered">
+
+        <div class="flex flex--12 flex--md-top">
+          <div class="flex__item--md-6">
+            <div class="flex-test flex-alignment"></div>
+          </div>
+          <div class="flex__item--md-6">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-middle">
+          <div class="flex__item--md-6">
+            <div class="flex-test flex-alignment"></div>
+          </div>
+          <div class="flex__item--md-6">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-bottom">
+          <div class="flex__item--md-6">
+            <div class="flex-test flex-alignment"></div>
+          </div>
+          <div class="flex__item--md-6">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre prettyprint>
+        <div class="flex flex--12 flex--md-top">
+          <div class="flex__item--md-6"></div>
+          <div class="flex__item--md-6"></div>
+        </div>
+
+        <div class="flex flex--12 flex--md-middle">
+          <div class="flex__item--md-6"></div>
+          <div class="flex__item--md-6"></div>
+        </div>
+
+        <div class="flex flex--12 flex--md-bottom">
+          <div class="flex__item--md-6"></div>
+          <div class="flex__item--md-6"></div>
+        </div>
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div class="l-section" tabitem="Horizontal Alignment">
+
+    <div class="l-subheader">
+      <h4>Flex Grid Horizontal Alignment</h4>
+      <h5>Horizontally align flex items by using
+        <code>.flex--{*bp}-start</code>,
+        <code>.flex--{*bp}-center</code>, or
+        <code>.flex--{*bp}-end</code>.</h5>
+    </div>
+
+    <div class="l-example">
+
+      <div class="l-rendered">
+
+        <div class="flex flex--12 flex--md-start">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-center">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-end">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre prettyprint>
+        <div class="flex flex--12 flex--md-start">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-center">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+
+        <div class="flex flex--12 flex--md-end">
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+          <div class="flex__item--md-2">
+            <div class="flex-test"></div>
+          </div>
+        </div>
+      </pre>
+
+    </div>
+
+  </div>
+
+</template>

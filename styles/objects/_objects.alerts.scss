@@ -1,0 +1,97 @@
+$alert-padding: 27px;
+$alert-padding-small: $alert-padding/4;
+$alert-padding-large: $alert-padding*2;
+
+// Alert boxes for use in forms or other feedback flows
+.alert {
+  max-width: 650px;
+  margin: 10px 0;
+  display: block;
+  border: 1px solid;
+  position:relative;
+  padding: $alert-padding;
+  border-radius:4px;
+  background-color: $greyscale-9;
+  border-color: $greyscale-2;
+  text-align: center;
+
+  h4, h3 {
+    margin: 0 0 0 0;
+    color: $greyscale-2;
+  }
+
+  p {
+    margin: 5px 0 0;
+    color: $greyscale-2;
+  }
+
+  a {
+    text-decoration:none;
+    font-weight:600;
+  }
+
+  &--sm {
+    padding:$alert-padding-small 30px $alert-padding-small 30px;
+  }
+
+  // Styling icons -- NOTE: If you leave out the data-icon attribute from HTML, the object padding simply adjusts.
+  &[data-icon] {
+
+    padding-left: 70px;
+
+    &:before {
+      @extend .icon;
+      font-size:1.5em;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      left: 0;
+      position: absolute;
+      padding: 0 15px;
+      border-top-left-radius: 9px;
+      border-bottom-left-radius: 9px;
+    }
+
+  }
+
+}
+
+//alert variable list
+//key: classname, arg1 is the var color
+$alerts: (
+  danger: $brand-danger,
+  success: $brand-success,
+  warning: $brand-warning,
+  info: $brand-info
+);
+
+// run through the Alerts Map above and add coloring to modifier classes
+
+@each $alert-name, $color in $alerts {
+
+  .alert--#{$alert-name} {
+    background: scale-color($color, $lightness: 70%);
+    border-color: $color;
+
+    &[data-icon]:before {
+      background: scale-color($color, $lightness: 62%);
+      color: $color;
+    }
+
+    h4, h3 {
+      color: $color;
+    }
+
+    a {
+      color:darken($color, 5%);
+
+      &:hover {
+        color: $color;
+      }
+
+    }
+
+  }
+
+}

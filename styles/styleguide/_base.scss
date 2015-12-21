@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+$brand-primary:     #1fa2ed;
+$brand-secondary:   #1ec279;
+$brand-tertiary:    #25364c;
+$brand-accent:      #DB4437;
+
+$brand-success:     #01975C;
+$brand-danger:      #E05B49;
+$brand-info:        #268AC3;
+$brand-warning:     #E38200;
+
+$white:             #ffffff;
+$gray-lightest:     #F9F9F9;
+$gray-lighter:      #DBDBDB;
+$gray-light:        #C2C2C2;
+$gray:              #898989;
+$gray-dark:         #464646;
+$gray-darker:       #393939;
+$gray-darkest:      #252525;
+$black:             #000000;

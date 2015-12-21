@@ -1,0 +1,254 @@
+button {
+  background-color: transparent;
+}
+
+// Default button styles (needed for all buttons)
+.btn {
+  display: inline-block;
+  padding: ($button-padding/4) $button-padding;
+  border-radius: $button-border-radius;
+  border: 1px solid;
+  margin: 2px 0;
+  max-width: 250px;
+  color: white;
+  outline: none;
+  box-sizing: content-box;
+  line-height: 1;
+  @include transition(padding, background, color);
+
+  &:hover, &:focus {
+    background: none;
+  }
+
+  &.btn--inverse {
+    background: none;
+
+    &:hover, &:focus {
+      color: white;
+    }
+
+  }
+
+}
+
+// Default button styles
+.btn {
+  background: $button-default;
+  border-color: $button-default;
+
+  &:hover, &:focus {
+    color: $button-default;
+  }
+
+  &.btn--inverse {
+    color: $button-default;
+
+    &:hover, &:focus {
+      background: $button-default;
+    }
+
+  }
+
+  &.btn--loading, &[disabled] {
+    border-color: scale-color($button-default, $lightness: 50%);
+    background-color: scale-color($button-default, $lightness: 50%);
+    color: white;
+    cursor: default;
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
+}
+
+
+// Mapped Button Variations for Color Modifiers
+// Key: Classname -- Value: Color Variable
+$buttons: (
+  'primary': $brand-primary,
+  'secondary': $brand-secondary,
+  'tertiary': $brand-tertiary,
+  'white': white
+);
+
+// run through the Buttons Map above and add coloring to modifier classes
+
+@each $button-name, $color in $buttons {
+
+  .btn--#{$button-name} {
+    background: $color;
+    border-color: $color;
+
+    &:hover, &:focus {
+      color: $color;
+    }
+
+    &.btn--inverse {
+      color: $color;
+
+      &:hover, &:focus {
+        background: $color;
+        @if $button-name == 'white' {
+          color: $brand-primary;
+        }
+      }
+
+    }
+
+    &.btn--loading, &[disabled] {
+      border-color: scale-color($color, $lightness: 50%);
+      background-color: scale-color($color, $lightness: 50%);
+      color: white;
+      &:hover, &:focus {
+        background-color: scale-color($color, $lightness: 50%);
+      }
+    }
+
+  }
+
+}
+
+
+// Styles shared by icon classes
+.btn--icon, .btn--hover-icon {
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    margin: auto;
+    left: ($button-padding * 0.4999999999999);
+    content: attr(data-icon);
+    font-family: 'Material Icons';
+    width: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    @include transition(padding, transform);
+  }
+
+}
+
+// Icon Modifier
+.btn--icon {
+  padding-right: ($button-padding * .6666666);
+  padding-left: ($button-padding * 1.333333333);
+}
+
+// Material Icon Animation Modifier
+.btn--hover-icon {
+  padding-right: $button-padding;
+  padding-left: $button-padding;
+  transition: all ease .3s;
+
+  &:after {
+    transform: translate($button-padding*-2,-50%);
+  }
+
+  &:hover, &:focus {
+    padding-right: ($button-padding * .6666666);
+    padding-left: ($button-padding * 1.333333333);
+
+    &:after {
+      transform: translate(0px,-50%);
+    }
+
+  }
+
+}
+
+// Large buttons (With icon modifier style adjustments)
+.btn--lg {
+  padding: ($button-padding-large/4) $button-padding-large;
+
+  &.btn--icon {
+
+    padding-right: ($button-padding-large * 0.6666666);
+    padding-left: ($button-padding-large * 1.3333333);
+
+    &:after {
+      left: ($button-padding-large * 0.4999999999);
+    }
+
+  }
+
+  &.btn--hover-icon {
+
+    padding-right: $button-padding-large;
+    padding-left: $button-padding-large;
+
+    &:hover, &:focus {
+      padding-right: ($button-padding-large * 0.6666666);
+      padding-left: ($button-padding-large * 1.33333333);
+
+      &:after {
+        left: ($button-padding-large * 0.4999999999);
+      }
+
+    }
+
+  }
+
+}
+
+
+// Small buttons (With icon modifier style adjustments)
+.btn--sm {
+  padding: ($button-padding-small/4) $button-padding-small;
+  font-size: 14px;
+
+  &.btn--icon {
+
+    padding-right: ($button-padding-small * 0.6666666);
+    padding-left: ($button-padding-small * 1.3333333);
+
+    &:after {
+      left: ($button-padding-small * 0.4999999999);
+    }
+
+  }
+
+  &.btn--hover-icon {
+
+    padding-right: $button-padding-small;
+    padding-left: $button-padding-small;
+
+    &:hover, &:focus {
+      padding-right: ($button-padding-small * 0.6666666);
+      padding-left: ($button-padding-small * 1.33333333);
+
+      &:after {
+        left: ($button-padding-small * 0.4999999999);
+      }
+
+    }
+
+  }
+
+}
+
+// Block button modifier
+.btn--full {
+  display: block;
+  box-sizing:border-box;
+  min-width:100%;
+}
+
+// Button Groups
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    margin: 5px 5px 5px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+}

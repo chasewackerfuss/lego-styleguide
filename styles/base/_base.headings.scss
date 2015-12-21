@@ -1,0 +1,74 @@
+// a few notes:
+//// Curious to know people's thoughts on having the Heading class option, and if so, if this is the best class name convention
+//// Right now I'm thinking we should leave any color modification to be done in specific contexts, rather than adding a global modifier like .heading--inverse.
+
+// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top margin for easier control within type scales as it avoids margin collapsing. Taken from Bootstrap 4
+
+
+//
+// Shared Heading Styles
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+
+
+//
+// for when a Heading class is added to an inline block element
+//
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  display: block;
+}
+
+
+//
+// Heading Styles
+//
+
+h1, .h1 {
+  font-size: 2rem; // 32px
+  color: $greyscale-2;
+  line-height: 1.3;
+  font-weight: 100;
+}
+
+h2, .h2 {
+  font-size: 1.75rem; // 26px
+  color: $greyscale-1;
+  line-height: 1.45;
+  font-weight: 300;
+}
+
+h3, .h3 {
+  font-size: 1.25rem; // 20px
+  color: $greyscale-1;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+h4, .h4 {
+  font-size: 1rem; // 16px
+  color: $greyscale-2;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+h5, .h5 {
+  font-size: 0.875rem; // 14px
+  color: $greyscale-1;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+h6, .h6 {
+  font-size: 0.75rem; // 12px
+  color: $greyscale-1;
+  line-height: 1.5;
+  font-weight: 300;
+}

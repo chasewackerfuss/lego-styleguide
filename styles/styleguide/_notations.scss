@@ -1,0 +1,16 @@
+.l-notation {
+  background-color: lighten(red, 40%);
+  padding: 1em 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  color: red;
+  font-weight: bold;
+  &:before {
+    content: 'TEAM NOTE:';
+    color: white;
+    background-color: darken(red, 10%);
+    padding: 2px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+}

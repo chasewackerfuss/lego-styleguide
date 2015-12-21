@@ -1,0 +1,199 @@
+.form {
+
+  &__field {
+    position:relative;
+    display:block;
+    padding:24px 0;
+
+    & input, & textarea {
+
+      border:1px solid $form-field-border;
+      color:$greyscale-3;
+
+      &:disabled {
+        background:$greyscale-9;
+        border:1px solid $greyscale-7;
+      }
+
+      &:focus {
+        border:1px solid $form-field-success;
+      }
+
+      &:focus ~ label {
+        transition:ease .1s;
+        color:$form-field-success;
+      }
+    }
+
+    & label {
+      min-width: 100%;
+      cursor:text;
+
+      &:after {
+        content:attr(data-notification);
+        opacity:0;
+      }
+    }
+
+    & input {
+
+      &:focus + label {
+
+          &:after {
+            opacity:1;
+            right:0;
+            margin-right: 6px;
+            position: absolute;
+        }
+      }
+    }
+  }
+
+    // error field state
+    // to add an error state to a field, first use the
+    // 'field--error' class, followed by a corresponding
+    // error state class in the same div that contains
+    // the 'form__field' class.
+    // Error states:
+        // error--name
+        // error--email
+        // error--url
+        // error--password
+
+  %form__label--top-right {
+    opacity:1 !important;
+    right:0 !important;
+    margin-right: 6px !important;
+    position: absolute !important;
+  }
+
+  .field--error {
+
+    & input {
+      border:1px solid $form-field-error !important;
+
+      & + label {
+        color:$form-field-error !important;
+        position:          absolute !important;
+        top:               7px !important;
+        left:              3px !important;
+        font-size:         0.75rem !important;
+
+        &:after {
+          color:$form-field-error !important;
+        }
+
+      }
+    }
+    & label:after {
+      @extend %form__label--top-right;
+    }
+  }
+
+    // field error states
+
+  .field--error.error--name label:after {
+    content: "Please enter a name";
+  }
+
+  .field--error.error--email label:after {
+    content:'Enter a valid Email Address';
+  }
+
+  .field--error.error--url label:after {
+    content:'Invalid URL';
+  }
+
+  .field--error.error--password label:after {
+    content:'Invalid Password';
+  }
+}
+
+.form__field input + label {
+
+  position:        absolute;
+  top:             36px;
+  left:            20px;
+}
+
+%form__label--top-left {
+  position:          absolute;
+  top:               7px;
+  left:              3px;
+  font-size:         0.75rem;
+  color:             $form-field-success;
+}
+
+.form__field input:focus + label {
+  @extend %form__label--top-left;
+}
+
+.form .is-filled {
+
+  & input ~ label {
+    @extend %form__label--top-left;
+  }
+}
+
+.form .is-filled {
+
+  & input {
+    border:            1px solid $form-field-success;
+  }
+
+  & label:after {
+    color:             $form-field-success;
+    @extend            %form__label--top-right;
+  }
+}
+
+// .form .is-filled--unfocused ~ label {
+//   opacity:    0;
+//   transition: none;
+// }
+
+.checkbox {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  color: $greyscale-4;
+  margin-bottom: .5em;
+}
+
+.checkbox + .checkbox-label:before {
+  content: "";
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $greyscale-7;
+  transition: background-color 0.1s ease, border 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox + .checkbox-label:hover:before {
+  border: 2px solid $brand-primary;
+}
+
+.checkbox:focus + .checkbox-label:before {
+  outline: none;
+  border: 2px solid $brand-primary;
+}
+
+.checkbox:checked + .checkbox-label:before {
+  content: "check";
+  font-family: 'Material Icons';
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-weight: 900;
+  color: white;
+  border: 1px solid $brand-primary;
+  background-color: $brand-primary;
+}

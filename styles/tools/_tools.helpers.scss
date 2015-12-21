@@ -1,0 +1,317 @@
+$padding-small: 1rem;
+$padding-medium: 2rem;
+$padding-large: 3rem;
+$padding-xxlarge: 5rem;
+
+$margin-small: 1rem;
+$margin-medium: 2rem;
+$margin-large: 3rem;
+$margin-xlarge: 4rem;
+
+.block-center {
+	margin: 0 auto;
+}
+
+.text {
+
+	&-right {
+  	text-align: right;
+	}
+
+	&-left {
+		text-align: left;
+	}
+
+	&-center {
+		text-align: center;
+	}
+
+}
+
+.padding {
+	&-sm {
+
+		&-all {
+			padding: $padding-small;
+		}
+
+	  &-vertical {
+	  	padding-top: $padding-small;
+	  	padding-bottom: $padding-small;
+		}
+
+	  &-horizontal {
+			padding-left: $padding-small;
+			padding-right: $padding-small;
+		}
+
+		&-top {
+			padding-top: $padding-small;
+		}
+
+		&-bottom {
+			padding-bottom: $padding-small;
+		}
+
+		&-left {
+			padding-left: $padding-small;
+		}
+
+		&-right {
+			padding-right: $padding-small;
+		}
+
+	}
+
+	&-md {
+
+		&-all {
+			padding: $padding-medium;
+		}
+
+	  &-vertical {
+	  	padding-top: $padding-medium;
+	  	padding-bottom: $padding-medium;
+		}
+
+	  &-horizontal {
+			padding-left: $padding-medium;
+			padding-right: $padding-medium;
+		}
+
+		&-top {
+			padding-top: $padding-medium;
+		}
+
+		&-bottom {
+			padding-bottom: $padding-medium;
+		}
+
+		&-left {
+			padding-left: $padding-medium;
+		}
+
+		&-right {
+			padding-right: $padding-medium;
+		}
+
+	}
+
+	&-lg {
+
+		&-all {
+			padding: $padding-large;
+		}
+
+	  &-vertical {
+	  	padding-top: $padding-large;
+	  	padding-bottom: $padding-large;
+		}
+
+	  &-horizontal {
+			padding-left: $padding-large;
+			padding-right: $padding-large;
+		}
+
+		&-top {
+			padding-top: $padding-large;
+		}
+
+		&-bottom {
+			padding-bottom: $padding-large;
+		}
+
+		&-left {
+			padding-left: $padding-large;
+		}
+
+		&-right {
+			padding-right: $padding-large;
+		}
+
+	}
+
+	&-xxlg {
+
+		&-all {
+			padding: $padding-xxlarge;
+		}
+
+	  &-vertical {
+	  	padding-top: $padding-xxlarge;
+	  	padding-bottom: $padding-xxlarge;
+		}
+
+	  &-horizontal {
+			padding-left: $padding-xxlarge;
+			padding-right: $padding-xxlarge;
+		}
+
+		&-top {
+			padding-top: $padding-xxlarge;
+		}
+
+		&-bottom {
+			padding-bottom: $padding-xxlarge;
+		}
+
+		&-left {
+			padding-left: $padding-xxlarge;
+		}
+
+		&-right {
+			padding-right: $padding-xxlarge;
+		}
+
+	}
+
+}
+
+
+
+.margin {
+	&-sm {
+
+		&-all {
+			margin: $margin-small;
+		}
+
+	  &-vertical {
+	  	margin-top: $margin-small;
+	  	margin-bottom: $margin-small;
+		}
+
+	  &-horizontal {
+			margin-left: $margin-small;
+			margin-right: $margin-small;
+		}
+
+		&-top {
+			margin-top: $margin-small;
+		}
+
+		&-bottom {
+			margin-bottom: $margin-small;
+		}
+
+		&-left {
+			margin-left: $margin-small;
+		}
+
+		&-right {
+			margin-right: $margin-small;
+		}
+
+	}
+
+	&-md {
+
+		&-all {
+			margin: $margin-medium;
+		}
+
+	  &-vertical {
+	  	margin-top: $margin-medium;
+	  	margin-bottom: $margin-medium;
+		}
+
+	  &-horizontal {
+			margin-left: $margin-medium;
+			margin-right: $margin-medium;
+		}
+
+		&-top {
+			margin-top: $margin-medium;
+		}
+
+		&-bottom {
+			margin-bottom: $margin-medium;
+		}
+
+		&-left {
+			margin-left: $margin-medium;
+		}
+
+		&-right {
+			margin-right: $margin-medium;
+		}
+
+	}
+
+	&-lg {
+
+		&-all {
+			margin: $margin-large;
+		}
+
+	  &-vertical {
+	  	margin-top: $margin-large;
+	  	margin-bottom: $margin-large;
+		}
+
+	  &-horizontal {
+			margin-left: $margin-large;
+			margin-right: $margin-large;
+		}
+
+		&-top {
+			margin-top: $margin-large;
+		}
+
+		&-bottom {
+			margin-bottom: $margin-large;
+		}
+
+		&-left {
+			margin-left: $margin-large;
+		}
+
+		&-right {
+			margin-right: $margin-large;
+		}
+
+	}
+
+	&-xlg {
+
+		&-all {
+			margin: $margin-xlarge;
+		}
+
+		&-vertical {
+			margin-top: $margin-xlarge;
+			margin-bottom: $margin-xlarge;
+		}
+
+		&-horizontal {
+			margin-left: $margin-xlarge;
+			margin-right: $margin-xlarge;
+		}
+
+		&-top {
+			margin-top: $margin-xlarge;
+		}
+
+		&-bottom {
+			margin-bottom: $margin-xlarge;
+		}
+
+		&-left {
+			margin-left: $margin-xlarge;
+		}
+
+		&-right {
+			margin-right: $margin-xlarge;
+		}
+
+	}
+
+}
+
+.sr-content {
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}

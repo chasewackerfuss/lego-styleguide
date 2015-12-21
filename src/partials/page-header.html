@@ -1,0 +1,18 @@
+<template>
+<!-- <require from="tab-link"></require> -->
+
+  <div class="l-page-header" ref="header">
+    <h2>${title}</h2>
+    <h4>${description}</h4>
+
+    <div class="l-pagenav">
+	    <ul class="l-pagenav__items">
+				<li repeat.for="tab of tabs.list" class="${tab.isActive ? 'tab-is-active' : ''}">
+					<a click.delegate="$parent.toSection(tab);">${tab.value}</a>
+			  </li>
+			</ul>
+		</div>
+
+  </div>
+
+</template>

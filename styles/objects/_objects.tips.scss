@@ -1,0 +1,139 @@
+.tip {
+
+  position: relative;
+
+  &__callout {
+    position: absolute;
+    bottom: calc(100% + #{$tip-distance});
+    background-color: $tip-bg;
+    color: $tip-color;
+    border-radius: 6px;
+    padding: 5px 20px;
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+    z-index: 99;
+    font-size: $tip-font-size;
+    text-align: center;
+    max-width: 190px;
+    min-width: 130px;
+
+    // bridges the gap between item and tip when hovering to the tooltip
+    &:after {
+      height: $tip-distance;
+      width: 100%;
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    // triangle
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include triangle(down, #{$tip-arrow-size}, #{$tip-bg});
+    }
+
+  }
+
+  &:hover {
+    .tip__callout {
+      display: block;
+
+    }
+  }
+
+  &--bottom {
+
+    .tip__callout {
+      bottom: auto;
+      top: calc(100% + #{$tip-distance});
+      left: 50%;
+
+      // triangle
+      &:before {
+        top: auto;
+        bottom: 100%;
+        @include triangle(up, #{$tip-arrow-size}, #{$tip-bg});
+      }
+
+      // bridge
+      &:after {
+        bottom: 100%;
+        top: auto;
+      }
+
+    }
+
+  }
+
+  &--right {
+
+    .tip__callout {
+      bottom: auto;
+      top: 50%;
+      left: calc(100% + #{$tip-distance});
+      right: auto;
+      transform: translateX(0) translateY(-50%);
+
+      // triangle
+      &:before {
+        top: 50%;
+        bottom: auto;
+        right: 100%;
+        left: auto;
+        transform: translateX(0) translateY(-50%);
+        @include triangle(right, #{$tip-arrow-size}, #{$tip-bg});
+      }
+
+      // bridge
+      &:after {
+        height: 100%;
+        width: $tip-distance;
+        top: 0;
+        right: 100%;
+        left: auto;
+      }
+
+    }
+
+  }
+
+  &--left {
+
+    .tip__callout {
+      bottom: auto;
+      top: 50%;
+      right: calc(100% + #{$tip-distance});
+      left: auto;
+      transform: translateX(0) translateY(-50%);
+
+      // triangle
+      &:before {
+        top: 50%;
+        bottom: auto;
+        left: 100%;
+        right: auto;
+        transform: translateX(0) translateY(-50%);
+        @include triangle(left, #{$tip-arrow-size}, #{$tip-bg});
+      }
+
+      // bridge
+      &:after {
+        height: 100%;
+        width: $tip-distance;
+        top: 0;
+        left: 100%;
+        right: auto;
+      }
+
+    }
+
+  }
+
+
+}
