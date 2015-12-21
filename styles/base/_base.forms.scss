@@ -1,0 +1,29 @@
+input, textarea {
+
+  display:           block;
+  border-radius:     6px;
+  background:        transparent;
+  outline:           0;
+  width:             100%;
+  font-size:         $font-small;
+  border:            1px solid $greyscale-6;
+
+  &:focus {
+    outline:         0;
+  }
+}
+
+input {
+  padding:           6px 20px;
+  height:            48px;
+}
+
+textarea {
+  padding:           15px;
+}
+
+label {
+  position:        relative;
+  color:           $opaque-gray;
+  font-size:       $font-small;
+}

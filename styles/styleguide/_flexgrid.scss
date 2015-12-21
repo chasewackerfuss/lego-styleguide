@@ -1,0 +1,22 @@
+// flex helpers
+.flex-test, .flex-first {
+	margin-bottom: 1em;
+	padding: 1em;
+	min-height: 1em;
+	background-color: #1fa2ed;
+	color: white;
+	border-radius: 4px;
+}
+.flex-first {
+	background-color: darken(#1fa2ed, 10);
+}
+.flex-last {
+	background-color: darken(#1fa2ed, 30);
+}
+.flex-nested {
+	margin-bottom: 0;
+}
+.flex-alignment {
+	min-height: 7em;
+}
+// end of flex display helpers

@@ -1,0 +1,48 @@
+.l-color-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l-color {
+  width: 140px;
+  height: 140px;
+  flex: 0 0 140px;
+  padding: 10px;
+  margin: 5px 1em 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
+  border-radius: 50%;
+
+  span {
+    display: block;
+    text-align: center;
+    text-shadow: 0 0 2px rgba(0,0,0,.75);
+    color: white;
+    font-weight: bold;
+    &.l-color__hex {
+      font-size: 10px;
+
+    }
+    &.l-color__var {
+      font-size: 13px;
+    }
+  }
+  &.brand-primary {background-color: $brand-primary;}
+  &.brand-secondary {background-color: $brand-secondary;}
+  &.brand-tertiary {background-color: $brand-tertiary;}
+  &.brand-accent {background-color: $brand-accent;}
+  &.brand-success {background-color: $brand-success;}
+  &.brand-danger {background-color: $brand-danger;}
+  &.brand-info {background-color: $brand-info;}
+  &.brand-warning {background-color: $brand-warning;}
+  &.gray-lightest {background-color: $gray-lightest;}
+  &.gray-lighter {background-color: $gray-lighter;}
+  &.gray-light {background-color: $gray-light;}
+  &.gray {background-color: $gray;}
+  &.gray-dark {background-color: $gray-dark;}
+  &.gray-darker {background-color: $gray-darker;}
+  &.gray-darkest {background-color: $gray-darkest;}
+}

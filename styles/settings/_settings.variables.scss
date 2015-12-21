@@ -1,0 +1,157 @@
+// Color Variables
+//
+
+$brand-primary:						#0069FF !default;
+$brand-secondary:					#1ec279 !default;
+$brand-tertiary:					#25364c !default;
+$brand-accent:						#DB4437 !default;
+
+$brand-success:		 				#01975C !default;
+$brand-danger:		 				#E05B49 !default;
+$brand-info:		 				#268AC3 !default;
+$brand-warning:		 				#E38200 !default;
+
+$greyscale-0:						#000 !default;
+$greyscale-1:						#111 !default;
+$greyscale-2:						#333 !default;
+$greyscale-3:						#666 !default;
+$greyscale-4:						#888 !default;
+$greyscale-5:						#808080 !default;
+$greyscale-6:						#999 !default;
+$greyscale-7:						#ccc !default;
+$greyscale-8:						#ddd !default;
+$greyscale-9:						#fafafa !default;
+$greyscale-10:				  #fff !default;
+
+$opaque-gray:           rgba(#4A4A4A, .6) !default;
+$opaque-white:          rgba(#fff, .5) !default;
+
+
+// Typography
+//
+$font-family-base:		 			"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-base:		 			16px !default;
+$line-height-base:		 			1.5 !default;
+
+
+// Font sizes from style guide.
+$font-xxlarge:		 				2rem !default;
+$font-xlarge:		 				1.65rem !default;
+$font-large:		 				1.5rem !default;
+$font-medium:		 				1.25rem !default;
+$font-small:		 				1rem !default;
+$font-xsmall:		 				0.875rem !default;
+$font-xxsmall:		 				0.75rem !default;
+
+
+// Base
+//
+// Body styling
+$body-color:		 				$greyscale-2 !default;
+$body-bg:		 					$greyscale-10 !default;
+
+
+// Base Link Styling
+$link-color:		 				$brand-primary !default;
+$link-hover-color:		 		 	darken($brand-primary, .1) !default;
+$link-hover-decoration:				none !default;
+
+
+$text-muted:		 				$greyscale-7 !default;
+$abbr-border-color:		 			$greyscale-7 !default;
+
+
+// Loading animation colors
+$load-icon-color:		 		    $brand-primary !default;
+
+
+// needed for Bootstrap Reboot
+$table-bg:							$greyscale-7 !default;
+$table-cell-padding:		 		1rem !default; // needs thinking
+
+
+// TABS
+//
+// default tabs
+$tabs-link:		 		       		$greyscale-7 !default;
+$tabs-link-hover:		 		    $greyscale-2 !default;
+$tabs-item-active:		 		    $greyscale-2 !default;
+$tabs-underline:		 		    $brand-secondary !default;
+
+
+// dark tabs
+$tabs-dark-link:		 		    rgba(255, 255, 255, 0.2) !default;
+$tabs-dark-link-hover:		 		$greyscale-10 !default;
+$tabs-dark-item-active:		 		$greyscale-10 !default;
+$tabs-dark-underline:		 		$brand-secondary !default;
+
+
+// Tips
+$tip-distance:		 		    	15px !default;
+$tip-bg:		 		          	$greyscale-2 !default;
+$tip-color:		 		       		$greyscale-10 !default;
+$tip-arrow-size:		 		  	6px !default;
+$tip-font-size:		 		   		.75rem !default;
+
+
+// Flexgrid
+$container:		 					1140px !default;
+$gutter:		 					24px !default; // gets divided in half
+$base-columns:		 				12 !default; // columns
+
+
+//Breakpoints
+$break-xl:		 					80em !default; // 1280
+$break-lg:		 					64em !default; // 1024
+$break-md:		 					48em !default; // 768
+$break-sm:		 					30em !default; // 480
+
+
+//Form field states
+$form-field-success:		 		  $brand-secondary !default;
+$form-field-error:		 		    $brand-danger !default;
+$form-field-border:           $greyscale-6 !default;
+
+// dropdown styling
+$dropdown-width:		 		    170px !default;
+$dropdown-text-align:		 		left !default;
+$dropdown-toggle-distance:		 	20px !default;
+$dropdown-filter-shadow:		 	drop-shadow(0px 0px 10px rgba(0,0,0,.3)) !default;
+$dropdown-item-color:		 		$greyscale-2 !default;
+$dropdown-bg:		 		        white !default;
+$dropdown-border-radius:		 	4px !default;
+$dropdown-item-hover-color:		 	white !default;
+$dropdown-item-hover-bg:		 	$brand-primary !default;
+$dropdown-divider-bg:		 		$greyscale-7 !default;
+
+// buttons
+$button-default:		 			$greyscale-5 !default;
+$button-border-radius:		 		15em !default;
+$button-padding:		 			32px !default;
+$button-padding-large:		 		($button-padding * 1.666666666) !default;
+$button-padding-small:		 		($button-padding * .6666666) !default;
+
+// modals
+$color-modal-overlay:		 		transparentize(scale-color($brand-info, $lightness:	-80%), 0.1) !default;
+$color-modal-wrap:		 		    $greyscale-10 !default;
+$color-modal-header:		 		$greyscale-9 !default;
+$color-modal-footer:		 		$greyscale-10 !default;
+$color-modal-sub-footer:		 	$greyscale-9 !default;
+$color-modal-close-btn:		 		$greyscale-7 !default;
+$color-modal-close-btn-hover:	$brand-primary;
+$modal-padding:								2rem !default;
+
+// icons
+$icon-size:							1rem !default;
+
+// divider
+$divider-color: $greyscale-8;
+
+// panels
+$panel-background:            white;
+$panel-shadow:                0px 0px 5px rgba(0, 0, 0, 0.25);
+$panel-icon-size:             1.875rem;
+

@@ -1,0 +1,101 @@
+.tabs {
+  margin: 0 0;
+
+  .tabs__item {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 1.25em;
+      color: $tabs-link;
+      transition: all 0.1s;
+      width: 100%;
+
+      &:visited {
+        color: $tabs-link;
+      }
+
+      &:hover,
+      &:focus {
+        color: $tabs-link-hover;
+        outline: none;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  .is-active {
+
+    a {
+      color: $tabs-item-active;
+
+      &:visited {
+        color: $tabs-item-active;
+      }
+
+    }
+
+    // underline block
+    &:after {
+      content: '';
+      display: block;
+      margin: 8px auto 0;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 0.1s;
+      background: $tabs-underline;
+    }
+
+  }
+
+}
+
+.tabs--dark {
+
+  .tabs__item {
+
+    a {
+      color: $tabs-dark-link;
+
+      &:visited {
+        color: $tabs-dark-link;
+      }
+
+      &:hover,
+      &:focus {
+        color: $tabs-dark-link-hover;
+      }
+
+    }
+
+  }
+
+  .is-active a {
+    color: $tabs-dark-item-active;
+
+    &:visited {
+      color: $tabs-dark-item-active;
+    }
+
+    // underline block
+    &:after {
+      background: $tabs-dark-underline;
+    }
+
+  }
+
+}

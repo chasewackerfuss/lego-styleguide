@@ -1,0 +1,34 @@
+<template>
+
+  <div class="l-nav-sidebar">
+    <img class="leadpages-logo" src="/img/newlogo.png">
+    <a href="" class="l-circle-item">
+      <span class="icon">fingerprint</span>
+    </a>
+    <a href="" class="l-circle-item">
+      <span class="icon">dashboard</span>
+    </a>
+    <a href="" class="l-circle-item">
+      <span class="icon">favorite</span>
+    </a>
+  </div>
+
+  <div class="l-sidebar">
+    <h2>App Design</h2>
+    <div repeat.for="category of categories" class="${category.categoryOpen ? 'category-is-active' : ''}">
+
+      <h3 click.delegate="$parent.expandList(category)">${category.name}</h3>
+
+      <ul show.bind="category.categoryOpen && category.pages.length > 0" class="l-sidebar__nav">
+
+          <li repeat.for="page of category.pages">
+            <a href="${'/#/' + page.route}" class="${page.navModel.isActive ? 'page-is-active' : ''} ${$parent.$parent.activeRoute === category.route? 'route-is-active' : ''}">${page.title}</a>
+          </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</template>

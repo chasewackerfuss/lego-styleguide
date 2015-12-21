@@ -1,0 +1,45 @@
+// Ordered lists have a counter reset and numbers re-added with a pseudo element
+.ordered-list {
+  counter-reset: numberlist;
+  margin: 3px 0;
+
+  li {
+    list-style: none;
+    position: relative;
+    counter-increment: numberlist;
+
+    &:before {
+      content: counter(numberlist) '.';
+      position: absolute;
+      top: 0px;
+      left: -20px;
+      color: $greyscale-5;
+      font-weight: bold;
+    }
+
+  }
+
+  &--circled {
+    
+    li {
+      margin-bottom: 1em;
+
+      &:before {
+        content: counter(numberlist);
+        font-weight: normal;
+        left: -34px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: $greyscale-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+    }
+
+  }
+  
+}

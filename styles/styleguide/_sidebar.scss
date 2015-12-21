@@ -1,0 +1,120 @@
+.l-nav-sidebar {
+  width: 62px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  padding: 2rem 0.75rem;
+  background-color: #F2F4F7;
+  overflow: hidden;
+
+  .leadpages-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .l-circle-item {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    display: block;
+    margin: 0.5rem auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      color: #979797;
+      font-size: 20px;
+    }
+
+  }
+}
+
+.l-sidebar {
+  width: 200px;
+  position: fixed;
+  left: 62px;
+  top: 0;
+  bottom: 0;
+  padding: 2em 2em 4em 2em;
+  background-color: #020020;
+  box-shadow: inset -9px 0px 18px -10px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+  h2 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 2.5rem;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    margin: 1rem 0 0.5rem;
+    padding: 0 0;
+    font-weight: light;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 0.75px;
+    color: rgba(255, 255, 255, .60);
+    cursor: pointer;
+  }
+
+  .l-sidebar__nav {
+    list-style-type: none;
+    font-weight: 300;
+    background-color: #1D1C31;
+    margin: 0 -2rem;
+    padding: 0.5rem 2rem;
+
+    li {
+      padding: 0.5rem 0;
+      color: $brand-tertiary;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        position: relative;
+
+        &:hover, &:focus {
+          color: white;
+          text-decoration: none;
+        }
+
+        &.page-is-active {
+          color: white;
+
+          &:after {
+            content: "";
+            height: 3px;
+            background-color: #0069FF;
+            width: 100%;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .category-is-active {
+    h3 {
+      color: white;
+    }
+  }
+
+  .lego {
+    margin: 0 0 50px;
+    font-size: 10px;
+  }
+
+}

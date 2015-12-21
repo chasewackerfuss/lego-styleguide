@@ -1,0 +1,32 @@
+.lego {
+  font-size: 15px;
+  width: 2.4em;
+  height: 3.25em;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 1em;
+    width: .8em;
+    background-color: $brand-primary;
+    position: absolute;
+    top: 2.25em;
+    box-shadow: .8em 0px 0px 0px $brand-tertiary,
+                1.6em 0px 0px 0px $brand-secondary,
+                0px -1em 0px 0px $brand-tertiary,
+                0px -2em 0px 0px $brand-secondary;
+  }
+
+  &:after {
+    content: "";
+    height: .25em;
+    width: .40em;
+    background-color: darken($brand-secondary, 5%);
+    position: absolute;
+    top: 0;
+    left: .2em;
+    box-shadow: .8em 2em 0px 0px darken($brand-tertiary, 5%),
+                1.6em 2em 0px 0px darken($brand-secondary, 5%);
+  }
+
+}

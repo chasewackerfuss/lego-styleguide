@@ -1,0 +1,22 @@
+<template>
+  <require from="partials/sidebar"></require>
+	<require from="partials/page-header"></require>
+
+  <div class="l-wrapper">
+
+    <sidebar router.bind="router"></sidebar>
+
+    <div class="l-main">
+  		<page-header></page-header>
+  		<div class="l-page-container">
+  			<div class="l-page">
+
+      		<router-view></router-view>
+      		
+      	</div>
+      </div>
+    </div>
+
+  </div>
+
+</template>

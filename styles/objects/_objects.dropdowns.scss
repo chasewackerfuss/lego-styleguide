@@ -1,0 +1,162 @@
+// need to set position relative so we can absolutely position the dropdown
+.dropdown {
+  position: relative;
+  cursor: pointer;
+
+  &.dropdown-is-open {
+    ul {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+}
+
+
+.dropdown {
+
+  // arrow
+  &.dropdown-is-open:before {
+
+    // positioning
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 10;
+    height: 0;
+    width: 0;
+
+    // styling
+    content: '';
+    border: solid transparent;
+    pointer-events: none;
+
+    @include triangle(up, 6px, white);
+
+  }
+
+  ul {
+
+    // positioning styles
+    position: absolute;
+    right: 50%;
+    margin: 0 0;
+    top: calc(100% + #{$dropdown-toggle-distance} ); // variable interpolated inside the calc function
+    transform: translateX(50%);
+    width: $dropdown-width;
+    z-index: 9;
+
+    // styling
+    list-style: none;
+    background-color: $dropdown-bg;
+    border-radius: $dropdown-border-radius;
+    opacity: 0;
+    display: none;
+    padding: .75rem .5rem; // 12px 8px
+    text-align: $dropdown-text-align;
+    filter: $dropdown-filter-shadow;
+    font-size: 1rem;  // 16px
+
+    li {
+      margin: 0;
+      color: $dropdown-item-color;
+      line-height: 1.5;
+      font-weight: 400;
+
+      a {
+        padding: .75rem;  // 12px
+        color: $dropdown-item-color;
+        display: block;
+        text-decoration: none;
+
+        &:hover, &:focus {
+
+          background-color: $dropdown-item-hover-bg;
+          color: $dropdown-item-hover-color;
+          border-radius: $dropdown-border-radius;
+          outline: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &--justify-right {
+
+    ul {
+      right: 0px;
+      transform: translateX(0);
+    }
+
+  }
+
+  &--justify-left {
+
+    ul {
+      right: auto;
+      left: 0px;
+      transform: translateX(0);
+    }
+
+  }
+
+  &--align-left {
+
+    &.dropdown-is-open:before {
+      top: 9px;
+      right: calc(100% + 17px);
+
+      @include triangle(right, 6px, white);
+    }
+
+    ul {
+      right: calc(100% + #{$dropdown-toggle-distance} ); // variable interpolated inside the calc function
+      top: 0;
+      transform: translateX(0);
+    }
+
+  }
+
+  &--align-right {
+
+
+    &.dropdown-is-open:before {
+      top: 9px;
+      right: auto;
+      left: calc(100% + 11px);
+
+      @include triangle(left, 6px, white);
+    }
+
+    ul {
+      left: calc(100% + #{$dropdown-toggle-distance} ); // variable interpolated inside the calc function
+      top: 0;
+      transform: translateX(0);
+    }
+
+  }
+
+  .dropdown__divider {
+    width: 100%;
+    height: 1px;
+    background-color: $dropdown-divider-bg;
+    margin: .25rem 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+  .dropdown {
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+  }
+}

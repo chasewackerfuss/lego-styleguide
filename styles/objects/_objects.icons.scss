@@ -1,0 +1,49 @@
+%icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: $icon-size;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  display: inline-block;
+  font-smoothing: antialiased;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+[data-icon] {
+  &:before, &:before {
+    @extend %icon;
+  }
+}
+
+.icon {
+
+  @extend %icon;
+
+  &--primary {
+    color: $brand-primary;
+    border-color: $brand-primary;
+  }
+
+  &--secondary {
+    color: $brand-secondary;
+    border-color: $brand-secondary;
+  }
+
+  &--tertiary {
+    color: $brand-tertiary;
+    border-color: $brand-tertiary;
+  }
+
+}

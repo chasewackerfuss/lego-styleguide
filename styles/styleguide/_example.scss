@@ -1,0 +1,75 @@
+
+.l-example {
+
+  padding: 2rem 0 5rem;
+
+  &__heading {
+    display: block;
+    max-width: 260px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+  }
+
+  &__sub-heading {
+    display: block;
+    max-width: 260px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #616161;
+  }
+
+  &__render-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    .render-container__item {
+      display: inline-block;
+    }
+  }
+
+}
+
+
+pre[prettyprint] {
+  background-color: #F2F4F7;
+  padding: 20px 20px 20px !important;
+  margin: 0 0;
+  border: 1px solid #DDDDDD !important;
+  position: relative;
+  word-wrap: break-word;
+
+  //Element Tag Name
+  .tag {
+    color: #839496;
+  }
+  // Attribute Title
+  .atn {
+    color: #839496;
+  }
+  //Equals Signs
+  .pun {
+    color: #586E75;
+  }
+  // Attribute Input
+  .atv {
+    color: #859900;
+  }
+  // Content
+  .pln {
+    color: #268BD2;
+  }
+  // Comments
+  .com {
+    color: white;
+  }
+  &, .tag, .atn, .pun, .atv, .pln, .com {
+    &::selection {
+      background: #073642 !important;
+    }
+  }
+
+}
